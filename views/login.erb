@@ -13,10 +13,25 @@
         Registrate
       </div>
       <div class="card-body">
-        <form method="GET" action="/pregunta">
+        <form method="POST" action="/q-creation">
           <div class="form-group">
-            <label for="email">Email address</label>
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Ingresa correo electrónico">
+            <label for="id">Matrícula</label>
+            <input type="text" class="form-control" id="id" placeholder="Ingresa matrícula" name="id">
+            <label for="nombre">Nombre</label>
+            <input type="text" class="form-control" id="nombre" placeholder="Ingresa Nombre" name="nombre">
+            <label for="n_questions"></label>
+            <select class="form-control form-control-sm" id="n_questions" name="n_questions">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
           </div>
           <button type="submit" class="btn btn-primary">Entrar</button>
         </form>

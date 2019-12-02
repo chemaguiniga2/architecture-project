@@ -1,0 +1,38 @@
+<!DOCYPE html>
+<html>
+  <head>
+    <title>Book Info</title>
+    <meta charset="utf-8">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+  </head>
+  <style>
+    .input-hidden {
+      visibility: hidden;
+    }
+  </style>
+  <body>
+    <div class="card container">
+      <div class="card-header">
+        ¡Felicidades!
+      </div>
+      <div class="card-body">
+        <form method="POST" action="/reiniciar">
+          <div class="form-group">
+            <p>Tu score fue: <%= SERVICES.score_user  %></p>
+            <p>Scores: </p>
+            <ul>
+              <% SERVICES.users.each do |user| %>
+              <li>
+                <%= user['nombre'] %>, <%= user['score'] %>
+              </li>
+              <% end %>
+            </ul>
+          </div>
+          <button type="submit" class="btn btn-primary">Siguiente</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
